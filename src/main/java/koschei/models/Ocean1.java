@@ -5,15 +5,15 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class Ocean1 {
-    private final Island2 island;
-
-    @Autowired
-    public Ocean1(Island2 island) {
-        this.island = island;
-    }
+    private Island2 island;
 
     @Override
     public String toString() {
         return "на океане остров " + island.toString();
+    }
+
+    @Autowired
+    public void setIsland(Island2 island) {
+        this.island = island;
     }
 }
